@@ -115,7 +115,7 @@ export class Response {
         | Uint8Array
         | Deno.Reader
         | undefined
-      : JSON.stringify(this.body);
+      : JSON.stringify(this.body, this.ctx.app.options.jsonReplacer);
 
     this.response = {
       body,

@@ -168,6 +168,7 @@ export interface AppOptions {
   sessionKey?: string;
   sessionOptions?: CookieOptions;
   sessionSecret?: string;
+  jsonReplacer?: (this: any, key: string, value: any) => any
 }
 
 export interface ListenOptions {
